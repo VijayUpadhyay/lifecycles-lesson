@@ -1,8 +1,9 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import MouseTracker from "./components/MouseTracker.component"
 
-import Lifecycles from "./lifecycles.component";
+import Lifecycles from "./components/Lifecycles.component";
 
 class App extends React.Component {
   constructor() {
@@ -10,7 +11,7 @@ class App extends React.Component {
 
     this.state = {
       showChild: true,
-      text: ""
+      text: ''
     };
   }
 
@@ -18,6 +19,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+          <MouseTracker />
           <img src={logo} className="App-logo" alt="logo" />
           <button
             onClick={() =>
@@ -39,6 +41,7 @@ class App extends React.Component {
           </button>
           {this.state.showChild ? <Lifecycles text={this.state.text} /> : null}
         </header>
+
       </div>
     );
   }
