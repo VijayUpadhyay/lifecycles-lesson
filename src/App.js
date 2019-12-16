@@ -1,8 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import Lifecycles from './lifecycles.component';
+import Lifecycles from "./lifecycles.component";
 
 class App extends React.Component {
   constructor() {
@@ -10,15 +10,15 @@ class App extends React.Component {
 
     this.state = {
       showChild: true,
-      text: ''
+      text: ""
     };
   }
 
   render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
           <button
             onClick={() =>
               this.setState(state => ({
@@ -31,7 +31,7 @@ class App extends React.Component {
           <button
             onClick={() =>
               this.setState(state => ({
-                text: state.text + '_hello'
+                text: state.text + "_hello"
               }))
             }
           >
